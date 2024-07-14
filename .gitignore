@@ -1,0 +1,7 @@
+# ide
+.idea/
+.env
+
+# logger
+log-junit.xml
+report.html
