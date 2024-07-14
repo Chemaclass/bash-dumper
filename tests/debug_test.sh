@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function set_up() {
-  source "./debug.sh"
+  source "./src/debug.sh"
 }
 
 function test_dump() {
