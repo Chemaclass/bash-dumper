@@ -7,7 +7,11 @@ A collection of debugging functions in bash.
 
 ## How to use?
 
-1. Copy-paste `debug.sh` 
+1. Copy-paste the fuction that you want to use into your script.
+
+or 
+
+1. Copy-paste the entire file `src/debug.sh` 
 2. Import the file into your main script
 ```bash
 declare -r ROOT_DIR="$(dirname "${BASH_SOURCE[0]}")"
