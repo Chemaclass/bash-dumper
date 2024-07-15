@@ -25,8 +25,15 @@ _COLOR_BLACK="$(sgr 30)"
 _COLOR_GREEN="$(sgr 32)"
 _COLOR_DEFAULT="$(sgr 0)"
 
+function trace() {
+  set -x
+}
+
+function untrace() {
+  set +x
+}
+
 # An alternative to echo when debugging.
-# This is debug function; do not use in prod!
 function dump() {
   printf "[%s] %s: %s\n" "${_COLOR_YELLOW}DUMP${_COLOR_DEFAULT}" \
     "${_COLOR_GREEN}${BASH_SOURCE[1]}:${BASH_LINENO[0]}" \
@@ -40,4 +47,12 @@ function dd() {
     "${_COLOR_DEFAULT}$*"
 
   kill -9 $$
+}
+
+function debug_var() {
+  local var_name=$1
+  local var_value=${!var_name}
+  printf "[%s] %s: %s=%s\n" "${_COLOR_FAINT}DEBUG${_COLOR_DEFAULT}" \
+    "${_COLOR_GREEN}${BASH_SOURCE[1]}:${BASH_LINENO[0]}" \
+    "$var_name" "$var_value"
 }
