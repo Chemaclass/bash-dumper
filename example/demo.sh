@@ -1,9 +1,9 @@
 #!/bin/bash
 
-declare ROOT_DIR
-ROOT_DIR="$(dirname "${BASH_SOURCE[0]}")"
+# shellcheck disable=SC2155
+declare ROOT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 
-source "$ROOT_DIR/../src/debug.sh"
+source "$ROOT_DIR/../src/dumper.sh"
 
 dump "hello, there"
 
