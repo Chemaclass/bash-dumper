@@ -2,6 +2,9 @@
 .idea/
 .env
 
+# dependencies
+lib/
+
 # logger
 log-junit.xml
 report.html
