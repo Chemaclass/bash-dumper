@@ -11,16 +11,15 @@ A collection of debugging functions in bash.
 
 or 
 
-1. Copy-paste the entire file `src/dumper.sh`
+1. Copy-paste the entire file `src/dumper.sh` or download it:
 ```bash
 # bash-dumper
-curl -L https://raw.githubusercontent.com/Chemaclass/bash-dumper/refs/heads/main/src/dumper.sh \
-  -o src/dumper.sh
+curl -L https://github.com/Chemaclass/bash-dumper/releases/download/0.1/dumper.sh \
+  -o src/dev/dumper.sh
 ```
 2. Import the file into your main script
 ```bash
-declare -r ROOT_DIR="$(dirname "${BASH_SOURCE[0]}")"
-
+declare ROOT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 source "$ROOT_DIR/src/dumper.sh"
 ```
 3. now you have access to all functions inside `dumper.sh`⚡️
