@@ -11,19 +11,19 @@ A collection of debugging functions in bash.
 
 or 
 
-1. Copy-paste the entire file `src/debug.sh`
+1. Copy-paste the entire file `src/dumper.sh`
 ```bash
 # bash-dumper
-curl -L https://raw.githubusercontent.com/Chemaclass/bash-dumper/refs/heads/main/src/debug.sh \
-  -o src/debug.sh
+curl -L https://raw.githubusercontent.com/Chemaclass/bash-dumper/refs/heads/main/src/dumper.sh \
+  -o src/dumper.sh
 ```
 2. Import the file into your main script
 ```bash
 declare -r ROOT_DIR="$(dirname "${BASH_SOURCE[0]}")"
 
-source "$ROOT_DIR/src/debug.sh"
+source "$ROOT_DIR/src/dumper.sh"
 ```
-3. now you have access to all functions inside `debug.sh`⚡️
+3. now you have access to all functions inside `dumper.sh`⚡️
 
 > Example: [Chemaclass/bash-skeleton](https://github.com/Chemaclass/bash-skeleton/blob/main/install-dependencies.sh)
 
